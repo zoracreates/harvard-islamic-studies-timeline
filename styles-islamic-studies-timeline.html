@@ -83,29 +83,32 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #285064;
+        background: #d87d00;
         text-align: center;
         width: 100px;
         max-width: 100%;
         margin-right: 0px;
         margin-left: auto;
         padding: 0px;
-        font-weight: 700;
+        font-weight: 900;
         font-family: 'Lato', sans-serif;
     }
 
     .region-header-third ul.nice-menu a.menu-heading,
     .home-button a {
         text-transform: uppercase;
-        font-weight: bold;
-        color: #ffffff;
+        font-weight: 900;
         letter-spacing: .5px;
+        color: #fff;
     }
 
+    .horizontalcard div.imageconteiner,
     .region-header-third ul.nice-menu a.menu-heading {
         position: relative;
     }
 
+
+    .horizontalcard div.imageconteiner:after,
     .home-button .content .boxes-box-content:after,
     .region-header-third ul.nice-menu a.menu-heading:after {
         content: '';
@@ -124,6 +127,10 @@
         border-right-color: #fff;
     }
 
+    .horizontalcard div.imageconteiner:after {
+        right: 20px;
+    }
+
     #header-container .block-boxes-os_boxes_html.home-button,
     .region-header-third ul.nice-menu a.menu-heading {
         font-size: 20px !important;
@@ -140,7 +147,7 @@
     }
 
     ul.nice-menu li.menuparent ul {
-        background: #1E3A48;
+        background: #AD6500;
     }
 
     ul.nice-menu ul {
@@ -294,7 +301,7 @@
         border-bottom: none;
         text-transform: uppercase;
         padding: 10px;
-        font-weight: bold;
+        font-weight: 900;
         font-size: 1.125rem;
         letter-spacing: .5px;
     }
@@ -617,7 +624,7 @@ uncomment this part if you haven't added this code anywhere else
 
     .timeperiods .card a {
         color: #fff;
-        font-weight: 700;
+        font-weight: 900;
         border-bottom: none;
         text-decoration: none;
         padding: 10px 10px 15px 10px;
@@ -648,7 +655,7 @@ uncomment this part if you haven't added this code anywhere else
     }
 
     .finalslide .hero.introcol {
-        background-image: url(/files/aisptimeline/files/background_harvard_yard.jpg);
+        background-image: url(/files/aisptimeline/files/harvard_gates.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
@@ -664,55 +671,68 @@ uncomment this part if you haven't added this code anywhere else
     }
 
     .horizontalcard {
-        background-position: left bottom;
+        background-position: -10px bottom;
         background-repeat: no-repeat;
-        background-image: url(/files/aisptimeline/files/red-pattern.png);
+        background-image: url(/files/aisptimeline/files/white-back-shadow-lg.png);
         background-size: cover;
-        color: #fff;
+        min-height: 240px;
     }
 
-    .horizontalcard .content {
-        border-top: 5px solid #122f3d;
-    }
-
-    .horizontalcard a {
-        color: #fff;
-    }
+    .horizontalcard:after {
+    content: '';
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: -10px;
+    bottom: 10px;
+    right: 20px;
+    left: -10px;
+    /* z-index: 0; */
+}
 
     .horizontalcard p {
-        padding: 0px 20px 20px 20px;
+        padding: 0px 40px 20px 20px;
+        font-family: "Georgia", serif;
     }
 
     #content-column .horizontalcard h3 {
         font-size: 30px;
-        font-weight: 700;
+        font-weight: 900;
         position: relative;
-        padding: 20px 20px 5px 20px;
+        padding: 20px 40px 5px 20px;
         font-family: 'Lato', sans-serif !important;
+        color: #B71F3D;
     }
 
     .horizontalcard h3:after {
         content: "";
-        margin: 10px 0px 10px 200px;
+        margin: 10px 0px 10px 180px;
         display: block;
         height: 5px;
         width: 50px;
-        background-color: #122f3d;
+        background-color: #2A5063;
     }
+
 
     .horizontalcard img {
         width: 200px !important;
-        height: auto !important;
+        height: 200px !important;
+        object-fit: contain;
         margin-bottom: -2px !important;
     }
 
     .horizontalcard div.imageconteiner {
         float: left;
         line-height: 1;
-        margin-right: 20px;
-        max-height: 400px;
+        max-width: 200px;
+        padding: 20px;
+        max-height: 200px;
         overflow: hidden;
     }
+
+
+
+
+
 
     .introcol .block-boxes-os_boxes_html:not(.introtext) .boxes-box-content {
         min-height: 730px;
@@ -731,15 +751,15 @@ uncomment this part if you haven't added this code anywhere else
         margin: 0px;
     }
 
-    iframe  {
+    iframe {
         width: 100%;
     }
 
-    iframe + div a {
-         color: #333 !important;
+    iframe+div a {
+        color: #333 !important;
     }
 
-    iframe + div {
+    iframe+div {
         margin-bottom: 10px;
     }
 
@@ -889,7 +909,7 @@ uncomment this part if you haven't added this code anywhere else
     .timeline time {
         display: block;
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 900;
         margin-bottom: 8px;
         padding-bottom: 5px;
         color: #B71F3D;
@@ -908,7 +928,7 @@ uncomment this part if you haven't added this code anywhere else
         line-height: 1.2px;
         font-family: "Lato", sans-serif !important;
         letter-spacing: -.8px;
-        font-weight: 700;
+        font-weight: 900;
         margin-top: 55px;
         text-transform: none;
         text-align: center;
@@ -917,7 +937,9 @@ uncomment this part if you haven't added this code anywhere else
 
     .finalslide .cards h2.block-title {
         text-align: left;
-        margin-bottom: 20px
+        margin-bottom: 60px;
+        font-family: "Georgia", serif !important;
+        font-size: 50px;
     }
 
     .timeperiods h2.block-title {
@@ -1201,7 +1223,7 @@ uncomment this part if you haven't added this code anywhere else
         line-height: 1.2;
         font-family: "Lato", sans-serif !important;
         letter-spacing: -.8px;
-        font-weight: 700;
+        font-weight: 900;
         margin-top: 5px;
         margin-bottom: 10px;
         max-width: 600px;
@@ -1249,7 +1271,7 @@ uncomment this part if you haven't added this code anywhere else
 
     .introtext .os-year {
         line-height: 1.2;
-        color: #2A5063;
+        color: #d87d00;
         font-size: 26px;
         font-weight: 700;
         margin-bottom: 0px;
@@ -1262,6 +1284,7 @@ uncomment this part if you haven't added this code anywhere else
         display: block;
         font-size: 1rem;
         font-weight: 700;
+        color: #B71F3D;
         font-family: "Lato", sans-serif !important;
         letter-spacing: .5px;
     }
@@ -1421,8 +1444,8 @@ uncomment this part if you haven't added this code anywhere else
         }
 
         .introcol .block-boxes-os_boxes_html:not(.introtext) .boxes-box-content {
-        min-height: 0px;
-    }
+            min-height: 0px;
+        }
     }
 
     @media (max-width:1024px) {
