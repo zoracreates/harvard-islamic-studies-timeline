@@ -226,42 +226,44 @@
     }
 
 
-    .introtext ul:last-child {
+    .introtext ul:last-child,
+    .navbuttons ul {
         list-style: none !important;
         margin: 0px;
         display: flex;
     }
 
-    .introtext li.p-nav,
-    .introtext li.n-nav {
+    li.p-nav,
+    li.n-nav {
         background-color: #fff;
         border: 2px solid #DDDDD0;
         width: 48%;
     }
 
-    .introtext li.p-nav a span,
-    .introtext li.n-nav a span {
+    li.p-nav a span,
+    li.n-nav a span {
         font-size: 0px;
         line-height: 0px;
     }
 
-    .introtext li.n-nav {
+    li.n-nav {
         border-radius: 0 1000px 1000px 0;
         margin-left: 1%;
     }
 
-    .front .introtext ul:last-child li.n-nav {
+    .front .introtext ul:last-child li.n-nav,
+    .navbuttons ul li.n-nav {
         margin-left: auto;
         margin-right: 0%;
     }
 
-    .introtext li.p-nav {
+    li.p-nav {
         border-radius: 1000px 0 0 1000px;
         margin-right: 1%;
     }
 
-    .introtext li.p-nav a,
-    .introtext li.n-nav a {
+    li.p-nav a,
+    li.n-nav a {
         line-height: 1.2;
         font-weight: 700;
         font-family: 'Lato'sans-serif;
@@ -277,7 +279,7 @@
         margin: auto;
     }
 
-    .introtext li.n-nav a {
+    li.n-nav a {
         padding-right: 50px;
         background-image: url(/files/aisptimeline/files/arrow-right.png);
         background-repeat: no-repeat;
@@ -285,7 +287,7 @@
         background-size: 35px;
     }
 
-    .introtext li.p-nav a {
+    li.p-nav a {
         padding-left: 50px;
         background-image: url(/files/aisptimeline/files/arrow-left.png);
         background-repeat: no-repeat;
@@ -678,17 +680,6 @@ uncomment this part if you haven't added this code anywhere else
         min-height: 240px;
     }
 
-    .horizontalcard:after {
-        content: '';
-        background: rgba(0, 0, 0, .5);
-        position: absolute;
-        top: -10px;
-        bottom: 10px;
-        right: 20px;
-        left: -10px;
-        /* z-index: 0; */
-    }
-
     .horizontalcard p {
         padding: 0px 40px 20px 20px;
         font-family: "Georgia", serif;
@@ -730,14 +721,14 @@ uncomment this part if you haven't added this code anywhere else
     }
 
 
-    .introcol .block-boxes-os_boxes_html:not(.introtext) .boxes-box-content p {
+    .introcol .block-boxes-os_boxes_html:not(.introtext):not(.navbuttons) .boxes-box-content p {
         font-weight: 300;
         font-size: 1.125rem;
         margin-bottom: 5px;
     }
 
 
-    .introcol .block-boxes-os_boxes_html:not(.introtext) .boxes-box-content {
+    .introcol .block-boxes-os_boxes_html:not(.introtext):not(.navbuttons) .boxes-box-content {
         min-height: 730px;
         display: flex;
         align-items: center;
@@ -1096,10 +1087,20 @@ uncomment this part if you haven't added this code anywhere else
         margin: auto;
     }
 
-    .introcol .block-boxes-os_boxes_html.introtext .block-content {
+    .introcol .block-boxes-os_boxes_html.introtext .block-content,
+    .introcol .block-boxes-os_boxes_html.navbuttons .block-content,
+    .introcol .transcript .block-content {
         padding: 0px 10%;
         margin: auto;
     }
+
+    .transcript .ui-state-default {
+        background-color: #fff;
+        border:  2px solid #DDDDD0;
+    }
+    #content-column .transcript h3 {
+    margin: 0px;
+}
 
 
     div#columns {
@@ -1297,13 +1298,34 @@ uncomment this part if you haven't added this code anywhere else
         padding: inherit;
     }
 
-    .introtext {
+    .introtext,
+    .navbuttons {
         background-image: url(/files/aisptimeline/files/white-back-solid-3.png);
         background-size: cover;
         background-position: top right;
         background-repeat: no-repeat;
         padding: 20px 0;
     }
+
+    .navbuttons {
+    padding-top: 12px;
+}
+    .introtext.podcast {
+        background-position: center;
+        padding-bottom: 0px;
+    }
+
+    #content-panels .transcript .block-inner {
+        margin-top: 0px;
+    }
+
+    .navbuttons {
+        background-position: right bottom;
+    }
+
+    .transcript {
+    background: #fff;
+}
 
     .introcol.no-img-right .at-panel .region {
         float: right;
@@ -1447,7 +1469,7 @@ uncomment this part if you haven't added this code anywhere else
             padding: 0px 15px !important
         }
 
-        .introcol .block-boxes-os_boxes_html:not(.introtext) .boxes-box-content {
+        .introcol .block-boxes-os_boxes_html:not(.introtext):not(.navbuttons) .boxes-box-content {
             min-height: 0px;
         }
     }
@@ -1528,28 +1550,32 @@ uncomment this part if you haven't added this code anywhere else
 
 
     @media (max-width: 690px) {
-        .introtext ul:last-child {
+        .introtext ul:last-child,
+        .navbuttons ul,
+        li.n-nav {
             display: block;
         }
 
-        .introtext li.p-nav,
-        .introtext li.n-nav {
+        li.p-nav,
+        li.n-nav {
             width: 90%;
         }
 
-        .introtext li.n-nav {
+        li.n-nav,
+        .navbuttons ul li.n-nav {
             margin-left: 0%;
             margin-top: 10px;
         }
 
-        .introtext li.p-nav {
+        li.p-nav {
             margin-right: 0%;
         }
     }
 
     @media (max-width: 420px) {
 
-        .introcol .block-boxes-os_boxes_html.introtext .block-content {
+        .introcol .block-boxes-os_boxes_html.introtext .block-content,
+        .introcol .block-boxes-os_boxes_html.navbuttons .block-content  {
             padding: 0px;
         }
 
