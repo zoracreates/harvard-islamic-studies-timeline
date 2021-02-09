@@ -7,6 +7,16 @@
         color: #333;
     }
 
+    h4 {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #columns .transcript p:last-child {
+        margin-top: 0px;
+    }
+
     .region-header-first {
         width: 70%;
     }
@@ -226,7 +236,7 @@
     }
 
 
-    .introtext ul:last-child,
+    .introtext ul:last-child:not(.credits),
     .navbuttons ul {
         list-style: none !important;
         margin: 0px;
@@ -251,7 +261,7 @@
         margin-left: 1%;
     }
 
-    .front .introtext ul:last-child li.n-nav,
+    .front .introtext ul:last-child:not(.credits) li.n-nav,
     .navbuttons ul li.n-nav {
         margin-left: auto;
         margin-right: 0%;
@@ -295,14 +305,29 @@
         background-size: 35px;
     }
 
+    p.os-button {
+        text-align: center;
+        padding: 10px;
+        display: block;
+        background-color: #a51c30;
+    }
+
+    #footer p.os-button {
+        text-align: right;
+        max-width: none;
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    #footer p.os-button a {
+        padding: 10px;
+    }
 
     p.os-button a {
-        background-color: #a51c30;
         font-family: 'Lato', sans-serif;
         color: #fff;
         border-bottom: none;
         text-transform: uppercase;
-        padding: 10px;
         font-weight: 900;
         font-size: 1.125rem;
         letter-spacing: .5px;
@@ -456,6 +481,7 @@ uncomment this part if you haven't added this code anywhere else
         background-color: #a51c30;
     }
 
+    .about.not-front #page-wrapper,
     .front #page-wrapper {
         background: url(/files/aisptimeline/files/john_harvard_statue.jpg);
         background-repeat: no-repeat;
@@ -464,6 +490,10 @@ uncomment this part if you haven't added this code anywhere else
         background-color: #ccc;
         background-blend-mode: multiply;
         background-attachment: fixed;
+    }
+
+    .about.not-front #page-wrapper {
+        background: url(/files/aisptimeline/files/background_harvard_yard.jpg);
     }
 
     div#boxes-box-1502983124 img {
@@ -656,6 +686,7 @@ uncomment this part if you haven't added this code anywhere else
         padding: 0px;
     }
 
+
     .finalslide .hero.introcol {
         background-image: url(/files/aisptimeline/files/harvard_gates.jpg);
         background-size: cover;
@@ -664,6 +695,7 @@ uncomment this part if you haven't added this code anywhere else
         max-width: none;
         padding-top: 100px;
     }
+
 
     .finalslide .hero .content,
     .finalslide .cards .content,
@@ -736,6 +768,11 @@ uncomment this part if you haven't added this code anywhere else
         justify-content: center;
     }
 
+    #columns .introcol .block-boxes-os_boxes_html:not(.introtext):not(.navbuttons) p:last-child {
+        margin: 0px;
+    }
+
+    .about .introtext,
     .finalslide .hero .introtext {
         margin-bottom: 10%;
         background-position: bottom right;
@@ -756,6 +793,29 @@ uncomment this part if you haven't added this code anywhere else
 
     iframe+div {
         margin-bottom: 10px;
+    }
+
+    .creditscontainer {
+        background-image: url(/files/aisptimeline/files/white-back-transparent-3.png);
+        background-position: right bottom;
+
+        background-size: 97%;
+        background-repeat: no-repeat;
+    }
+
+    .creditscontainer h3 {
+        padding-left: 35px;
+        padding-top: 20px;
+    }
+
+    .credits {
+        padding-left: 35px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        list-style: none;
+        margin: 0px;
+    }
+
     }
 
 
@@ -1094,6 +1154,10 @@ uncomment this part if you haven't added this code anywhere else
         margin: auto;
     }
 
+    .introcol .transcript .block-inner {
+        padding: 0px !important;
+    }
+
     .transcript .ui-state-default {
         background-color: #fff;
         border: 2px solid #DDDDD0;
@@ -1368,6 +1432,24 @@ uncomment this part if you haven't added this code anywhere else
 
     @media (max-width: 1008px) {
 
+
+        #footer p.os-button {
+            text-align: left;
+        }
+
+
+        .card.period1 {
+            margin-left: 15px;
+        }
+
+        .timeperiods.block-boxes-os_boxes_columns .region.region-four-fourth {
+            margin-left: 0px;
+        }
+
+        .timeperiods.block-boxes-os_boxes_columns .region .card {
+            margin-bottom: 20px;
+        }
+
         .open-submenu {
             display: none;
         }
@@ -1392,12 +1474,17 @@ uncomment this part if you haven't added this code anywhere else
 
         .block-boxes-os_boxes_follow .item-list {
             display: block;
-            padding-left: 80px;
+            padding-left: 70px;
+        }
+
+        #footer .footercontent ul.follow-me-links {
+            margin-left: 0px;
+            padding-bottom: 20px;
         }
 
         .footercontent .rightalign {
             text-align: left;
-            padding-left: 80px;
+            padding-left: 70px;
         }
 
 
@@ -1447,9 +1534,6 @@ uncomment this part if you haven't added this code anywhere else
             overflow-x: hidden !important;
         }
 
-        .region.region-footer {
-            width: 98% !important;
-        }
 
         .region-header-first {
             display: block !important;
@@ -1474,6 +1558,14 @@ uncomment this part if you haven't added this code anywhere else
         .introcol .block-boxes-os_boxes_html:not(.introtext):not(.navbuttons) .boxes-box-content {
             min-height: 0px;
         }
+
+        .region.region-footer {
+            width: 100%;
+        }
+
+        .footercontent .contactinfo {
+            padding-top: 20px;
+        }
     }
 
     @media (max-width:1024px) {
@@ -1483,6 +1575,12 @@ uncomment this part if you haven't added this code anywhere else
     }
 
     @media (max-width:768px) {
+
+        .introcol>.block-inner {
+            padding: 0px !important;
+        }
+
+
 
         .introtext p {
             letter-spacing: -.6px;
@@ -1528,13 +1626,20 @@ uncomment this part if you haven't added this code anywhere else
             margin-bottom: 35px;
         }
 
-        .finalslide .cards h2.block-title,
         .timeperiods h2.block-title,
-        .timeline h2.block-title {
+        .timeline h2.block-title,
+        .finalslide .cards h2.block-title {
             font-size: 32px;
-            margin-bottom: 0;
             text-transform: none;
             text-align: center;
+        }
+        .timeperiods h2.block-title,
+        .timeline h2.block-title {
+            margin-bottom: 0;
+        }
+
+        .timeperiods h2.block-title {
+            margin-bottom: 20px;
         }
 
         .os-dropcap {
@@ -1553,7 +1658,11 @@ uncomment this part if you haven't added this code anywhere else
 
     @media (max-width: 690px) {
 
-        .introtext ul:last-child,
+        .introcol .transcript .block-content {
+            padding: 10px;
+        }
+
+        .introtext ul:last-child:not(.credits),
         .navbuttons ul,
         li.n-nav {
             display: block;
